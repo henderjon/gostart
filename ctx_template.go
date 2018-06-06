@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"net/http"
 )
 
 type ctxTmpl struct {
@@ -28,7 +29,10 @@ func ctxGetTmpl(ctx context.Context) (*ctxTmpl, bool) {
 	return b, ok
 }
 
-// given r *http.Request
-// ctx := r.Context()
-// ctx = ctxSetTmpl(ctx, &ctxTmpl{})
-// *r = *r.WithContext(ctx)
+func ctxTmplHandler() http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		ctx := r.Context()
+		ctx = ctxSetTmpl(ctx, &ctxTmpl{})
+		*r = *r.WithContext(ctx)
+	})
+}
