@@ -16,6 +16,7 @@ func getBuildTimestamp() string {
 	return buildTimestamp
 }
 
+// assuming git ...
 // HEAD=$(shell git describe --dirty --long --tags 2> /dev/null  || git rev-parse --short HEAD)
 // TIMESTAMP=$(shell date '+%Y-%m-%dT%H:%M:%S %z %Z')
 // LDFLAGS="-X main.buildVersion=$(HEAD) -X 'main.buildTimestamp=$(TIMESTAMP)'"
