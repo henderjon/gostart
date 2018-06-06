@@ -22,7 +22,7 @@ type getOptParameters struct {
 // logger should be global
 var logger *log.Logger
 
-func getParams() *getOptParameters {
+func getOptParams() *getOptParameters {
 	params := &getOptParameters{}
 	flag.BoolVar(&params.Build.Debug, "debug", false, "once more, with feeling")
 	flag.BoolVar(&params.Help, "help", false, "show this message")

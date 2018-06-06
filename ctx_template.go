@@ -27,3 +27,8 @@ func ctxGetTmpl(ctx context.Context) (*ctxTmpl, bool) {
 	b, ok := ctx.Value(ctxTmplKey).(*ctxTmpl)
 	return b, ok
 }
+
+// given r *http.Request
+// ctx := r.Context()
+// ctx = ctxSetTmpl(ctx, &ctxTmpl{})
+// *r = *r.WithContext(ctx)
