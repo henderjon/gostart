@@ -35,14 +35,22 @@ func getOptParams() *getOptParameters {
 		os.Exit(0)
 	}
 
+	// value, ok := os.LookupEnv("")
+
 	// set globally via linker during compilation; in version.go
 	params.Build.Timestamp = getBuildTimestamp()
 	params.Build.Version = getBuildVersion()
 
-	logger = log.New(ioutil.Discard, "null ", log.Lshortfile|log.LUTC|log.LstdFlags)
-	if params.Build.Debug {
-		logger = log.New(os.Stderr, "debug ", log.Lshortfile|log.LUTC|log.LstdFlags)
-	}
+	logger = newCLILogger(params.Build.Debug)
 
 	return params
+}
+
+// New creates a new debuglogger
+func newCLILogger(echo bool) *log.Logger {
+	l := log.New(ioutil.Discard, "null ", log.Lshortfile|log.LUTC|log.LstdFlags)
+	if echo {
+		l = log.New(os.Stderr, "debug ", log.Lshortfile|log.LUTC|log.LstdFlags)
+	}
+	return l
 }
