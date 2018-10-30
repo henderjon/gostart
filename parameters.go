@@ -3,8 +3,6 @@ package main
 import (
 	"flag"
 	"fmt"
-	"io/ioutil"
-	"log"
 	"os"
 )
 
@@ -18,9 +16,6 @@ type getOptParameters struct {
 	Build buildParams
 	Help  bool
 }
-
-// logger should be global
-var logger *log.Logger
 
 func getOptParams() *getOptParameters {
 	params := &getOptParameters{}
@@ -41,16 +36,5 @@ func getOptParams() *getOptParameters {
 	params.Build.Timestamp = getBuildTimestamp()
 	params.Build.Version = getBuildVersion()
 
-	logger = newCLILogger(params.Build.Debug)
-
 	return params
-}
-
-// New creates a new debuglogger
-func newCLILogger(echo bool) *log.Logger {
-	l := log.New(ioutil.Discard, "null ", log.Lshortfile|log.LUTC|log.LstdFlags)
-	if echo {
-		l = log.New(os.Stderr, "debug ", log.Lshortfile|log.LUTC|log.LstdFlags)
-	}
-	return l
 }

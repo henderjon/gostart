@@ -10,8 +10,16 @@ all: print
 .PHONY: build
 build: darwin64 linux64
 
+.PHONY: dep
+dep:
+	go mod vendor
+
 clean:
 	rm -f $(BIN) $(BIN)-*
+
+.PHONY: local
+local:
+	go build -ldflags $(LDFLAGS) -o $(BIN)
 
 darwin64:
 	env GOOS=darwin GOARCH=amd64 go build -ldflags $(LDFLAGS) -o $(BIN)-darwin64-$(HEAD)
