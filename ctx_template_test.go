@@ -1,4 +1,4 @@
-package main
+package gostart
 
 import (
 	"net/http"
