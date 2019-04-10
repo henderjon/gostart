@@ -1,2 +1,10 @@
 github.com/google/go-cmp v0.2.0 h1:+dTQ8DZQJz0Mb/HjFlkptS1FeQ4cWSnN941F8aEG4SQ=
 github.com/google/go-cmp v0.2.0/go.mod h1:oXzfMopK8JAjlY9xF4vHSVASa0yLyX7SntLO5aqRK0M=
+github.com/henderjon/errors v0.0.2 h1:E5LDONdVzBJsbshj9CBTrVN3i0MQP9Bdi4r22SHEzgs=
+github.com/henderjon/errors v0.0.2/go.mod h1:WEorJy14YX/LU3GQvx97S1lvS3oSDGlSoE/IMcPaPAA=
+github.com/henderjon/errors v0.0.3 h1:XmmBQpsCvDCGYuo/qVNZWIAjNmh0wQPRDp1lY2WCjKU=
+github.com/henderjon/errors v0.0.3/go.mod h1:WEorJy14YX/LU3GQvx97S1lvS3oSDGlSoE/IMcPaPAA=
+github.com/henderjon/logger v0.0.1 h1:iiPH+1VPatSO1m0G+w5sZmn5FnJI4oqsszpyhaOl1nQ=
+github.com/henderjon/logger v0.0.1/go.mod h1:nC50ZUrhbHUfMLU/4sLgfuboL/A6AVRcZm7jlAzYWmE=
+github.com/henderjon/logger v0.0.2 h1:jF5KSrIi1rssR9Fyondj8RHiPuR/tkridu9FirEHbqM=
+github.com/henderjon/logger v0.0.2/go.mod h1:nC50ZUrhbHUfMLU/4sLgfuboL/A6AVRcZm7jlAzYWmE=
