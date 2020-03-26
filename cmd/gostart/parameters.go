@@ -1,4 +1,4 @@
-package gostart
+package main
 
 import (
 	"flag"
@@ -21,13 +21,13 @@ type GetOptParameters struct {
 }
 
 const doc = `
-%s is a simple analytics tool built by myON for myON.
+%s is a simple template for building something in Go.
 
 version:  %s
 compiled: %s
 built:    %s
 
-Usage: %s -cookie-salt <jwt-secret> [option [option]...]
+Usage: %s [option [option]...]
 
 Options:
 `

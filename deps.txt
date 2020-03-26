@@ -1,0 +1,12 @@
+github.com/google/go-cmp
+github.com/jteeuwen/go-bindata/...
+github.com/henderjon/logger
+github.com/henderjon/durations
+github.com/henderjon/handlerset
+github.com/henderjon/shutdown
+github.com/rs/cors
+github.com/capdig/titanium/http/healthcheck
+github.com/shamaton/msgpack
+github.com/henderjon/jwt
+github.com/satori/go.uuid
+github.com/henderjon/dbconnect/mysql/v1
